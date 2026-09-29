@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d" font-family='-apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+  <title id="t">One loop</title>
+  <desc id="d">Build finished, then prove, then desks review in parallel. Each desk at the bar with nothing blocking or major goes to the strong model for the final audit; any other desk skips the audit and its findings go to the fixers. Both paths lead to the record. If every desk was audited at the bar with nothing blocking or major open, the loop passes. Otherwise fixers fix, a check runs, and the next loop starts at prove.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#475467"/></marker>
+  </defs>
+  <rect width="1200" height="800" fill="#F6F7F9"/>
+
+  <text x="40" y="52" font-size="28" font-weight="700" fill="#1D2433">One loop</text>
+  <text x="40" y="80" font-size="16" fill="#475467">Each pass through the loop reviews, records, and either passes or hands findings to the fixers.</text>
+  <!-- legend -->
+  <rect x="770" y="34" width="14" height="14" rx="4" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="792" y="47" font-size="15" fill="#1D2433">work model (Sonnet 5.5)</text>
+  <rect x="984" y="34" width="14" height="14" rx="4" fill="#ECE5FA" stroke="#7448C9" stroke-width="2"/>
+  <text x="1006" y="47" font-size="15" fill="#1D2433">audit model (Opus 5.5)</text>
+
+  <!-- Row A -->
+  <rect x="40" y="110" width="200" height="90" rx="16" fill="#FFFFFF" stroke="#C5CBD6" stroke-width="2"/>
+  <text x="140" y="161" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Build finished</text>
+  <path d="M240 155 H292" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <rect x="300" y="110" width="240" height="90" rx="16" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="420" y="149" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Prove</text>
+  <text x="420" y="174" font-size="15" text-anchor="middle" fill="#344054">run it for real</text>
+  <path d="M540 155 H592" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <rect x="600" y="110" width="560" height="90" rx="16" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="880" y="142" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Desks review in parallel</text>
+  <text x="880" y="167" font-size="15" text-anchor="middle" fill="#344054">work model, each desk scores 0 to 100</text>
+  <text x="880" y="188" font-size="15" text-anchor="middle" fill="#344054">against the bar words</text>
+
+  <!-- arrow desks -> decision 1 -->
+  <path d="M880 200 V252" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Decision 1 -->
+  <path d="M880 260 L1100 330 L880 400 L660 330 Z" fill="#FFFFFF" stroke="#475467" stroke-width="2"/>
+  <text x="880" y="324" font-size="16" font-weight="700" text-anchor="middle" fill="#1D2433">At the bar (90+) and nothing</text>
+  <text x="880" y="346" font-size="16" font-weight="700" text-anchor="middle" fill="#1D2433">blocking or major?</text>
+
+  <!-- yes -> audit -->
+  <path d="M660 330 H602" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+  <text x="631" y="318" font-size="15" font-weight="700" text-anchor="middle" fill="#1E7A4F">yes</text>
+  <rect x="300" y="285" width="300" height="90" rx="16" fill="#ECE5FA" stroke="#7448C9" stroke-width="2"/>
+  <text x="450" y="322" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Final audit</text>
+  <text x="450" y="347" font-size="15" text-anchor="middle" fill="#344054">audit model, only for desks</text>
+  <text x="450" y="366" font-size="15" text-anchor="middle" fill="#344054">already at the bar</text>
+
+  <!-- no -> record -->
+  <text x="898" y="420" font-size="15" font-weight="700" fill="#B54708">no: audit skipped,</text>
+  <text x="898" y="440" font-size="15" fill="#475467">findings go to the fixers</text>
+  <path d="M880 400 V458" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+  <path d="M450 375 V458" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Record -->
+  <rect x="300" y="466" width="800" height="70" rx="16" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="700" y="498" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Record</text>
+  <text x="700" y="522" font-size="15" text-anchor="middle" fill="#344054">one log per loop: scores, findings, evidence</text>
+  <path d="M700 536 V578" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Decision 2 -->
+  <path d="M700 586 L940 656 L700 726 L460 656 Z" fill="#FFFFFF" stroke="#475467" stroke-width="2"/>
+  <text x="700" y="650" font-size="16" font-weight="700" text-anchor="middle" fill="#1D2433">Every desk audited at the bar,</text>
+  <text x="700" y="672" font-size="16" font-weight="700" text-anchor="middle" fill="#1D2433">nothing blocking or major open?</text>
+
+  <!-- yes -> pass -->
+  <path d="M940 656 H1002" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+  <text x="971" y="644" font-size="15" font-weight="700" text-anchor="middle" fill="#1E7A4F">yes</text>
+  <rect x="1010" y="621" width="150" height="70" rx="16" fill="#DDF3E6" stroke="#1E7A4F" stroke-width="2"/>
+  <text x="1085" y="664" font-size="20" font-weight="700" text-anchor="middle" fill="#14603C">Pass</text>
+
+  <!-- no -> fixers -->
+  <path d="M460 656 H258" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+  <text x="359" y="644" font-size="15" font-weight="700" text-anchor="middle" fill="#B54708">no</text>
+  <rect x="40" y="616" width="210" height="80" rx="16" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="145" y="649" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Fixers</text>
+  <text x="145" y="673" font-size="15" text-anchor="middle" fill="#344054">work model</text>
+  <path d="M145 616 V518" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Check -->
+  <rect x="40" y="430" width="210" height="80" rx="16" fill="#DCE8FB" stroke="#2F6FDB" stroke-width="2"/>
+  <text x="145" y="463" font-size="18" font-weight="700" text-anchor="middle" fill="#1D2433">Check</text>
+  <text x="145" y="487" font-size="15" text-anchor="middle" fill="#344054">build, lint, tests</text>
+  <!-- back to prove -->
+  <path d="M145 430 V236 H420 V208" stroke="#475467" stroke-width="2.5" fill="none" marker-end="url(#ah)" stroke-dasharray="8 6"/>
+  <text x="160" y="330" font-size="15" font-weight="700" fill="#475467">next loop,</text>
+  <text x="160" y="350" font-size="15" font-weight="700" fill="#475467">back to Prove</text>
+
+  <!-- cap note -->
+  <rect x="800" y="748" width="360" height="36" rx="18" fill="#FFFFFF" stroke="#C5CBD6" stroke-width="2"/>
+  <text x="980" y="772" font-size="15" text-anchor="middle" fill="#344054">cap: 3 loops, then carry what is open</text>
+</svg>

@@ -1,6 +1,6 @@
 # Role file template
 
-A repo writes its own team by adding one file per role, for example `team/roles/code-reviewer.md`. The repo then sets `rolesDir` in `.claude/review-desks.json` to that folder (for example `"rolesDir": "team/roles"`). The script tells each agent to read `<rolesDir>/<role>.md` first. The file name is the role name from the desk (`first` or `final`).
+A repo writes its own team by adding one file per role, for example `team/roles/code-reviewer.md`. The repo then sets `rolesDir` in `.claude/scored-review-loop.json` to that folder (for example `"rolesDir": "team/roles"`). The script tells each agent to read `<rolesDir>/<role>.md` first. The file name is the role name from the desk (`first` or `final`).
 
 Write two per desk: a first pass (work model) and a final audit (audit model).
 

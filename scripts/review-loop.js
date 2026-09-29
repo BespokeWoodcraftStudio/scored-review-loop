@@ -1,12 +1,12 @@
 export const meta = {
-  name: 'review-desks-loop',
+  name: 'scored-review-loop',
   description: 'Loop one piece of build work to the bar: optional proof run, every desk reviews on the work model, the audit model audits only a desk whose first pass meets the bar, one log per loop, fixers on the work model, one check step, again, until every desk is audited at the bar or the cap is reached',
   phases: [
     { title: 'Loop 1' }, { title: 'Loop 2' }, { title: 'Loop 3' }, { title: 'Loop 4' }, { title: 'Loop 5' },
   ],
 }
 
-// review-desks: the generic review loop. Everything specific to a repo comes in through args; every arg has a safe default
+// scored-review-loop: the generic review loop. Everything specific to a repo comes in through args; every arg has a safe default
 // or is left out when absent. Launch it with the Workflow tool: Workflow({ scriptPath: '<copy of this file>', args: {...} }),
 // or bake a settings file into a run copy with make-run.py, which swaps the settings in for the args line below.
 // Phases: meta lists Loop 1 to Loop 5 only, so startLoop + cap - 1 must be 5 or less (fixFirst with startLoop 1 also uses a Loop 0 phase, which is harmless).

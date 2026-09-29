@@ -1,9 +1,9 @@
 ---
-name: review-desks
+name: scored-review-loop
 description: Use when reviewing, auditing or QA-ing finished build work, before merging a lane or branch, when running or designing a review loop, when deciding which model reviews or audits, or when a review returns findings and you need to know what blocks and what happens next. Carries the desk model (each desk scores 0 to 100 against the owner's bar words), the severities, the pass rule, the loop flow, the default models, the cost rules and a ready workflow script.
 ---
 
-# Review desks
+# Scored review loop
 
 Work is judged by desks. A desk is one narrow reviewer with one lens. Each desk scores the work 0 to 100 against the owner's bar words. A cheap first pass reads everything; the strong model audits only the desks that are already at the bar.
 
@@ -89,7 +89,7 @@ Read the ids from the session's model list. Never guess an id, and never copy on
 
 1. Copy `scripts/review-loop.js` out of the skill folder to a scratch path (a running script must not be edited).
 2. Launch it with the Workflow tool: `scriptPath` = that copy, `args` = your settings (at least `root` and `scope`).
-3. Or bake a settings file into a run copy: `python3 scripts/make-run.py scripts/review-loop.js .claude/review-desks.json /scratch/run.js my-run`, then launch the copy by path with no pasted args.
+3. Or bake a settings file into a run copy: `python3 scripts/make-run.py scripts/review-loop.js .claude/scored-review-loop.json /scratch/run.js my-run`, then launch the copy by path with no pasted args.
 
 **B. By hand in a session.** No Workflow tool needed.
 
@@ -100,7 +100,7 @@ Read the ids from the session's model list. Never guess an id, and never copy on
 
 ## The settings file
 
-Looked for at `.claude/review-desks.json` in the repo. Read it first. The workflow script cannot read files, so either pass the file's contents as `args` or bake it in with `make-run.py`. Its keys are the script's args. Example: `review-desks.example.json`.
+Looked for at `.claude/scored-review-loop.json` in the repo. Read it first. The workflow script cannot read files, so either pass the file's contents as `args` or bake it in with `make-run.py`. Its keys are the script's args. Example: `scored-review-loop.example.json`.
 
 | Key | Meaning |
 |---|---|

@@ -4,3 +4,4 @@ run*.js
 docs/review-log/
 node_modules/
 .DS_Store
+.preview/
