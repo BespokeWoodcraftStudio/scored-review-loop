@@ -268,6 +268,9 @@ for (let loop = START; loop < START + CAP; loop++) {
     }
   }), CHUNK)
   const finals = results.filter(function (r) { return r && r.final })
+  // An account or rate limit fails every desk at once. Stop instead of running later loops that can only fail,
+  // and let the next run carry this loop (fixFirst with priorFindingsFile, or the same startLoop).
+  if (!finals.length) { log('Loop ' + loop + ': every desk came back empty (agents failed, usually an account or rate limit); stopped, carry this loop to the next run'); history.push({ loop: loop, minScore: 0, openHard: 0, record: 'stopped: every desk failed' }); break }
   const audited = finals.filter(function (r) { return r.audited }).length
   log('Loop ' + loop + ': the audit model audited ' + audited + ' of ' + DESK_KEYS.length + ' desks (the rest failed the first pass and go to the fixers)')
   const minScore = finals.length ? Math.min.apply(null, finals.map(function (r) { return Number(r.final.score) || 0 })) : 0

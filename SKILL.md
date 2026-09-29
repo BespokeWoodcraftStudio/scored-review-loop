@@ -64,6 +64,7 @@ prove --> first pass, every desk (work model)
 - **Reviews run after builders**, never beside them. A fix waits for the reviews in flight against that tree; if a fix has to land, discard those verdicts and re-run.
 - **Record.** One log per loop, from the template in `references/findings.md`.
 - **Fixers** fix every open blocking, major and minor, and cheap notes. **One check step** runs build, lint and tests once for all fixers.
+- **Limits.** If every desk in a loop comes back empty (agents failed, usually an account or rate limit), the script stops and the next run carries that loop. Never let a loop record results from failed agents.
 - **Cap.** Three loops by default. Raise it per run, never silently. Open items carry forward at their severity until closed with proof.
 
 ## Models
