@@ -1,0 +1,6 @@
+# run copies, logs and evidence made while using the skill
+run*.js
+*.run.js
+docs/review-log/
+node_modules/
+.DS_Store
